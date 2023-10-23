@@ -57,3 +57,37 @@ How can we use the `toThrow()` matcher from Jest to check for errors?
 ---
 
 © 2023 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
+<!-- Psuedo code >
+
+create a component class
+class Component {
+    constructor(children) {
+        // if(!children) {
+            this.children = [];
+        } else this.children = children;
+    }
+    render() {
+        //should just throw an error.  Needs to be deifned in the extending class.
+        throw (new error (Child class must implement render() method.))
+    }
+    renderInnerHtml() {
+        this.children.forEach( child => {
+            if( typeof child !== string) {
+                childNew = JSON.stringify(child);
+            }
+
+        });
+    }
+}
+
+class Header extends Component {
+    constructor() {
+
+    }
+    render() {
+        super() {}
+    }
+}
+
+create header, taskList and TaskListItem class that extend component.
